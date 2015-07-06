@@ -1,0 +1,29 @@
+<script>
+
+var guess,
+    answer,
+    message;
+
+
+guess = prompt("How many Grateful Dead concerts have you been to? Pick a number between 1 and 1,000.");
+console.log ("The user guessed" + guess);
+
+
+if(guess == 400){
+  message = "Awesome dude.  Another old hippie in the group!"
+}
+if( guess > 400) {
+  message = "Good to see you old timer!"
+if( guess > 1000) {
+  message = "That's waay too many!"
+}
+}
+else {
+  message = "you must be a young one"
+}
+
+
+alert(message);
+
+
+</script>
