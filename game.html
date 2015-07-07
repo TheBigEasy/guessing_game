@@ -1,29 +1,32 @@
 <script>
 
-var guess,
+var shows,
     answer,
     message;
 
 
-guess = prompt("How many Grateful Dead concerts have you been to? Pick a number between 1 and 1,000.");
-console.log ("The user guessed" + guess);
+shows = prompt("How many Grateful Dead concerts have you been to? Pick a number between 1 and 1,000.");
+alert("So you've seen " + shows + "?");
 
 
-if(guess == 400){
-  message = "Awesome dude.  Another old hippie in the group!"
-}
-if( guess > 400) {
-  message = "Good to see you old timer!"
-if( guess > 1000) {
-  message = "That's waay too many!"
-}
-}
-else {
-  message = "you must be a young one"
-}
-
+if(shows < 1) {
+	message = "You should go see a show."; 
+} else {
+	if((shows >= 1) && (shows <= 100)) {  
+		message = "you must be a young one";
+	} else {
+		if((shows >= 101) && (shows <= 400)) {
+			message = "Awesome dude.  Another old hippie in the group!"; 
+		} else {
+			if((shows >= 401) && (shows <= 1000)) {
+  				message = "Good to see you old timer!";
+  			} else { 
+  				message = "That's waay too many!";
+  			}
+  		}
+  	}
+};
 
 alert(message);
-
 
 </script>
